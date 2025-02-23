@@ -29,8 +29,9 @@ body {
 }
 
 
+
 #chota {
-    height: 100vh;
+    height: 116vh;
 }
 
 .black {
@@ -94,7 +95,7 @@ body {
 .box {
     position: relative;
     width: 30vw;
-    height: 43vw;
+    height: 47vw;
     background-color: black;
     margin: auto;
     opacity: 0.6;
@@ -139,6 +140,7 @@ body {
     height: 22px;
     z-index: 3;
     border-radius: 1vw;
+    overflow: hidden;
 }
 
 #close {
@@ -195,6 +197,7 @@ body {
     border: 0 solid white;
     border-radius: 7px;
     text-align: center;
+    overflow: hidden;
 }
 
 .whitelayer {
@@ -219,20 +222,103 @@ body {
     max-height: fit-content;
     top: 28.6vw;
     left: 11vw;
-
     color: #fff;
     font-size: 1.1vw;
     z-index: 3;
     background-color: ;
 }
+.footer{
+    position: relative;
+    width: 100vw;
+    height: 21vw;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    padding:4.1vw 11.3vw      
+}
+.footer .inner{
+    line-height: 3vw;
+}
+
+.footer .inner ul{
+    text-decoration: underline;
+    color: #b2b2b2;
+    font-size: .9rem;
+}
+.footer .inner #st{
+    display: flex;
+    justify-content: space-between  ;
+    margin-right: 11vw;
+}
+
+.footer .inner #nd{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10.8vw;
+}
+
+.footer .upper a{
+    text-decoration: none;
+    color: #b2b2b2;;
+}
+.footer .upper{
+    color: #b2b2b2;
+}
+
+.footer .inner button{
+    border: .4px solid white;
+    border-color: #514b4b;
+    border-radius: 3px;
+    background-color: rgb(22, 22, 22);
+    color: #fff;
+    min-width:8vw ;
+    min-height: 2vw;
+    font-size: 1rem;
+}
 
 .btcard {
     position: absolute;
+    margin-top: 1rem;
     color: white;
     z-index: 3;
     top: 30vw;
     left: 4vw;
-    line-height: 1rem;
+    /* line-height: 2rem; */
+    max-width: 23vw;
+    height: 10vw;
+}
+
+#check{
+    width: 1.3vw;
+    height: 1.3vw;
+    border-radius: 3px;
+}
+#remem{
+    font-size: .9rem;
+    margin-left: .5rem;
+}
+
+.btcard h4{
+    margin-top: 1rem;
+    font-weight: 400;
+    opacity: .7;
+}
+
+.btcard h4 a{ 
+    text-decoration: none;
+    color: white;   
+    font-size: 1vw; 
+    opacity: 1;
+}
+
+.btcard p{
+    margin-top:1rem;
+    font-size: small;
+    opacity: .4;
+}
+.btcard .Learn{
+    position: relative;
+    font-size: smaller;
+    top: 1em;
 }
 
 
@@ -325,12 +411,12 @@ body {
     margin-top: 4vh;
 }
 
-.content .join {
+.join {
     display: flex;
     gap: 10px;
 }
 
-.content #guessInput {
+.join #guessInput {
     width: 20vw;
     height: 7vh;
     background: none;
@@ -345,7 +431,7 @@ body {
 }
 
 
-.content .button {
+.join .button {
     width: 15vw;
     height: 7vh;
     background-color: red;
@@ -360,17 +446,17 @@ body {
     cursor: pointer;
 
 }
-.content .button a{
+.join .button a{
     text-decoration: none;
     color: white;
 
 }
 
-.content .button svg{
+.join .button svg{
     padding-top: 8px;
     width: 44px;
 }
-.content .button:hover{
+.join .button:hover{
     background-color: #8b1a1a;
 }
 
@@ -585,7 +671,6 @@ section .container-1 .flex-box .dabba .bag{
 .info{
     background-color: black;
     width: 100vw;
-    height: 200vh;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -615,12 +700,25 @@ section .container-1 .flex-box .dabba .bag{
 .info .frequent .faq{
     width: 83vw;
     background-color: rgba(45, 45, 45, 0.704);
-    height: 12vh;
+    min-height: 12vh;
     margin:0 auto;
-    padding: 27px;
-    display: flex;
-    justify-content: space-between;
     cursor: pointer;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "ques img"
+                         "ans  ans" ;
+}
+
+.info .frequent .faq>p{
+    grid-area: ques;
+    padding: 28px 20px;
+}
+.info .frequent .faq img{
+    grid-area: img;
+    padding: 20px 20px;
+
+
 }
 
 .info .frequent .faq:hover{
@@ -632,10 +730,33 @@ section .container-1 .flex-box .dabba .bag{
     padding: 27px;
     height: auto;
     background-color: rgba(45, 45, 45, 0.704);
+    grid-area: ans;
+    display: none;
 }
 
+.footer{
+    width: 100vw;
+    height: 60vh;
+    background-color: black;
+    font-family: "Roboto",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
 
+.footer p{
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+}
 
+.footer .join{
+    width: 80vw;
+    margin: 8px auto;
+    justify-content: center;
+}
+
+.footer .join #guessInput{
+    width: 35vw;
+}
 
 
 
@@ -671,7 +792,7 @@ main .container .poster .poster-0 {
     border-radius: 8px;
     /* background-color: rgb(22, 22, 22); */
     border: 2px solid red;
-    z-index: 1;
+    z-index: 3;
 
 
 }
@@ -696,9 +817,7 @@ main .container .poster .poster-0 .img img {
 
 main .container .poster .poster-0 .content {
     background-color: rgb(22, 22, 22);
-    position: absolute;
-    left: 50;
-    top: 50;
+    
 }
 
 main .container .poster .poster-1 .img {
