@@ -57,129 +57,27 @@ getNext();
 //To add answer divs for FREQUENTLY ASKED QUESTIONS
 let faq = document.querySelector(".info").querySelector(".faqs").getElementsByClassName("faq");
 console.log(faq);
-
-
-// document.getElementById("faqs").addEventListener("click", function(event) {
-//     if (event.target.classList.contains("faq")) {
-//         handleClick(event.target);
-//     }
-// });
-
-// function handleClick(div) {
-//     console.log("Div clicked:", div);
-//     div.lastElementChild.style.display = "block"
-// }
-
-faq.forEach(e => {
+let faqArr = Array.from(faq);
+console.log(faqArr);
+faqArr.forEach(e => {
     e.addEventListener("click", function(){
-        e.lastElementChild.style.display = "block";
-        let img = e.getElementsByTagName("img")[0]; 
-        if (img) {
-            img.style.transform = "rotate(45deg)"; 
+        // e.lastElementChild.style.display = "none"
+        console.log(e.lastElementChild.style.display);
+        
+        if(e.lastElementChild.style.display == "block"){
+            e.lastElementChild.style.display = "none";
+            let img = e.getElementsByTagName("img")[0]; 
+            if (img) {
+                img.style.transform = "rotate(0deg))"; 
+            }
         }
-
+        else{
+            e.lastElementChild.style.display = "block";
+            let img = e.getElementsByTagName("img")[0]; 
+            if (img) {
+                img.style.transform = "rotate(45deg)"; 
+            }
+        }
 
     })
 });
-
-
-
-
-
-// faq.addEventListener("click", function ( ) {
-//     faq.lastElementChild.style.display = "block";
-// })
-
-
-
-// async function getAns(){
-
-//     let faq1 = document.querySelector(".info").querySelector(".faqs").querySelector(".faq-1");
-//     faq1.addEventListener("click", function () {
-//         faq1.lastElementChild.style.display = "block";
-//         console.log(faq1.lastElementChild);
-    
-//         let img = faq1.getElementsByTagName("img")[0]; // Select first <img> inside .faq-1
-//         if (img) { // Check if image exists
-//             img.style.transform = "rotate(45deg)"; // Correct way to rotate image
-//         }
-        
-
-
-//         faq1.addEventListener("click",function(){
-//             this.style.cssText = "";
-//         })
-    
-    
-//     })
-// }
-// getAns();
-
-
-
-// let faq2 = document.querySelector(".info").querySelector(".faqs").querySelector(".faq-2");
-// faq2.addEventListener("click", function () {
-//     faq2.lastElementChild.style.display = "block";
-//     console.log(faq2.lastElementChild);
-
-//     let img = faq2.getElementsByTagName("img")[0]; // Select first <img> inside .faq-1
-//     if (img) { // Check if image exists
-//         img.style.transform = "rotate(45deg)"; // Correct way to rotate image
-//     }
-
-
-// })
-
-// let faq3 = document.querySelector(".info").querySelector(".faqs").querySelector(".faq-3");
-// faq3.addEventListener("click", function () {
-//     faq3.lastElementChild.style.display = "block";
-//     console.log(faq3.lastElementChild);
-
-//     let img = faq3.getElementsByTagName("img")[0]; // Select first <img> inside .faq-1
-//     if (img) { // Check if image exists
-//         img.style.transform = "rotate(45deg)"; // Correct way to rotate image
-//     }
-    
-    
-// })
-// // faq3.addEventListener("click", function () {
-// //     this.style.cssText = "";
-// // })
-
-// let faq4 = document.querySelector(".info").querySelector(".faqs").querySelector(".faq-4");
-// faq4.addEventListener("click", function () {
-//     faq4.lastElementChild.style.display = "block";
-//     console.log(faq4.lastElementChild);
-
-//     let img = faq4.getElementsByTagName("img")[0]; // Select first <img> inside .faq-1
-//     if (img) { // Check if image exists
-//         img.style.transform = "rotate(45deg)"; // Correct way to rotate image
-//     }
-
-// })
-
-// let faq5 = document.querySelector(".info").querySelector(".faqs").querySelector(".faq-5");
-// faq5.addEventListener("click", function () {
-
-//     faq5.lastElementChild.style.display = "block";
-//     console.log(faq5.lastElementChild);
-
-//     let img = faq5.getElementsByTagName("img")[0]; // Select first <img> inside .faq-1
-//     if (img) { // Check if image exists
-//         img.style.transform = "rotate(45deg)"; // Correct way to rotate image
-//     }
-// })
-
-// let faq6 = document.querySelector(".info").querySelector(".faqs").querySelector(".faq-6");
-// faq6.addEventListener("click", function () {
-//     faq6.lastElementChild.style.display = "block";
-//     console.log(faq6.lastElementChild);
-
-//     let img = faq6.getElementsByTagName("img")[0]; // Select first <img> inside .faq-1
-//     if (img) { // Check if image exists
-//         img.style.transform = "rotate(45deg)"; // Correct way to rotate image
-//     }
-
-// });
-
-

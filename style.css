@@ -13,21 +13,20 @@ html,
 body {
     width: 100%;
     height: 100%;
+    
 }
 
 .main {
     position: relative;
     width: 100vw;
-    height: 115vh;
+    height: 100vh;
     background-image: url(assets/images/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     z-index: 1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    z-index: 2;
 }
-
 
 
 #chota {
@@ -131,7 +130,7 @@ body {
     border: 0.2px solid white;
     border-radius: 7px;
 }
-
+/* 
 .eye {
     position: absolute;
     top: 30.5vh;
@@ -140,12 +139,17 @@ body {
     height: 22px;
     z-index: 3;
     border-radius: 1vw;
-    overflow: hidden;
+    transition: opacity 0.3 ease-in-out,transform 0.3 ease-in-out;
 }
 
 #close {
-    display: none;
+   opacity: 0;
+   transform: scale(0.8);
 }
+#open{
+    opacity: 1;
+    transform: scale(1);
+} */
 
 .eye img {
     width: 22px;
@@ -225,7 +229,7 @@ body {
     color: #fff;
     font-size: 1.1vw;
     z-index: 3;
-    background-color: ;
+
 }
 .footer{
     position: relative;
@@ -274,6 +278,21 @@ body {
     min-height: 2vw;
     font-size: 1rem;
 }
+/* 
+#payment{
+    border: .4px solid white;
+    border-color: #514b4b;
+    border-radius: 3px;
+    background-color: rgb(22, 22, 22);
+    color: #fff;
+    min-width:8vw ;
+    min-height: 2vw;
+    font-size: 1rem;
+} */
+/* #payment img{
+    color: white;
+    background-color: white;
+} */
 
 .btcard {
     position: absolute;
@@ -320,8 +339,6 @@ body {
     font-size: smaller;
     top: 1em;
 }
-
-
 
 .layer {
     position: absolute;
@@ -733,13 +750,14 @@ section .container-1 .flex-box .dabba .bag{
     background-color: rgba(45, 45, 45, 0.704);
     grid-area: ans;
     display: none;
+    border-top: 1px solid black;
 }
 
 
 
 .footer{
     width: 100vw;
-    height: 60vh;
+    height: auto;
     background-color: black;
     font-family: "Roboto",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
@@ -761,6 +779,29 @@ section .container-1 .flex-box .dabba .bag{
     width: 35vw;
 }
 
+.links{
+    color: rgb(179, 179, 179);
+}
+
+.links span{
+    font-size: 24px;
+    padding: 24px 0;
+}
+
+.links .unordered{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 22px;
+    padding: 24px 0;
+}
+
+.links .unordered a{
+    color: rgb(179, 179, 179);
+}
+
+.links .unordered a:active{
+    color: red;
+}
 
 
 
