@@ -25,6 +25,7 @@ body {
     z-index: 1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    z-index: 2;
 }
 
 
@@ -234,6 +235,8 @@ body {
     line-height: 1rem;
 }
 
+
+
 .layer {
     position: absolute;
     top: 6vw;
@@ -331,15 +334,16 @@ body {
     width: 20vw;
     height: 7vh;
     background: none;
-    padding: 12px;
+    padding: 15px;
     margin: 22px 0;
     border-radius: 5px;
-    border: 1px solid white;
+    border: 2px solid white;
     font-size: 16px;
     font-weight: 400;
     color: white;
 
 }
+
 
 .content .button {
     width: 15vw;
@@ -353,21 +357,21 @@ body {
     font-size: 24px;
     font-weight: 500;
     border-radius: 5px;
+    cursor: pointer;
 
 }
-
-section {
-    background-color: black;
+.content .button a{
+    text-decoration: none;
     color: white;
+
 }
 
-section .container {
-    height: 100vh;
-    width: 85vw;
-    margin: 12px auto;
-    position: relative;
-
-
+.content .button svg{
+    padding-top: 8px;
+    width: 44px;
+}
+.content .button:hover{
+    background-color: #8b1a1a;
 }
 
 .sepration {
@@ -392,20 +396,38 @@ section .container {
 
 }
 
+section {
+    background-color: black;
+    color: white;
+}
+
+section .container {
+    height: 55vh;
+    width: 85vw;
+    margin: 0 auto;
+    padding: 12px auto;
+    position: relative;
+    z-index: 2;
+    background-color: black;
+
+}
+
+
 section span {
     font-size: 28px;
-    margin-left: 9vw;
+    margin-left: 2vw;
     font-weight: 600;
 }
 
 section .container .cards {
-    min-width: 85vw;
-    position: relative;
+    min-width: 90vw;
+    /* position: relative; */
     margin: 2vw auto;
     /* border: 1px solid white; */
     padding: 3vh 2vw;
     clip-path: none;
     position: absolute;
+
 }
 
 section .container .cards .template {
@@ -413,28 +435,40 @@ section .container .cards .template {
     grid-template-columns: 10vw repeat(10, 200px);
     flex-direction: row;
     gap: 2vw;
-    transform: translateX(0%);
-    overflow-x: scroll;
+    /* transform: translateX(0%); */
+    transition: all 0.5s ease-in-out;
+
+
+    overflow-x: hidden;
 }
 
 section .container .cards .template .card {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     position: relative;
-    height: 40vh;
-    min-width: 17vw;
+    height: 35vh;
+    min-width: 11vw;
     border-radius: 10px;
+    transition: transform 0.3s ease-in;
 }
+
+section .container .cards .template .card:hover {
+    /* transform:scale(110%); */
+    /* transition: transform 1s ease-in-out;
+     */
+    transform: scale(1.1);
+}
+
 
 section .container .cards .template .card .number {
     position: absolute;
     bottom: 0;
-    left: -50%;
+    left: -70%;
     font-weight: 700;
-    color: black;
+    color: rgb(237, 214, 214);
     -webkit-text-stroke: 0.14rem rgb(255, 255, 255);
     text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
     font-size: 13vh;
-    z-index: 2;
+    z-index: 3;
 }
 
 section .container .cards .template .card img {
@@ -451,13 +485,21 @@ section .container .cards .template .card img {
 
 section .container .button {
     position: absolute;
+    z-index: 15;
     left: 0%;
-    top: 3%;
+    top: 15%;
     background-color: black;
     /* background-color: #1a1a1a; */
     width: 5vw;
-    height: 40vh;
+    height: 45vh;
     z-index: 12;
+}
+
+section .container .button-2:hover {
+    /* transition: ; */
+    transition-property: translateX(-100%);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
 
 section .container .button button {
@@ -471,11 +513,29 @@ section .container .button button {
     cursor: pointer;
 }
 
+section .container .button-1 {
+    position: absolute;
+    z-index: 15;
+    left: -10%;
+    background-color: black;
+    /* background-color: #1a1a1a; */
+    width: 5vw;
+    height: 45vh;
+    z-index: 12;
+    transition: transform 1s ease-in-out;
+}
+
 section .container .button-2 {
     position: absolute;
-    left: 95%;
-    top: 3%;
+    left: 94.5%;
+    /* top: 3%; */
+    transition: transform 1s ease-out;
 }
+
+/* section .container .button-2:hover{
+    transform: translateX(110%);
+} */
+
 
 section .container .button-2 button {
     position: absolute;
@@ -487,3 +547,162 @@ section .container .button-2 button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+section .container-1 .flex-box{
+    display: flex;
+    gap: 18px;
+    margin: 12px 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+}
+
+section .container-1 .flex-box .dabba{
+    width: 23%;
+    height: 38vh;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    border-radius: 15px;
+}
+
+section .container-1 .flex-box .dabba h3{
+    font-size: 24px;
+    font-weight: 500;
+    padding: 20px 15px;
+}
+
+section .container-1 .flex-box .dabba .bag{
+    padding: 7px 15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+
+.info{
+    background-color: black;
+    width: 100vw;
+    height: 200vh;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.info .frequent{
+    width: 83vw;
+    height: auto;
+    margin: 2px auto;
+}
+
+.info span{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5vh;
+}
+
+.info .frequent .faqs{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 400;
+    gap: 5px;
+
+}
+
+.info .frequent .faq{
+    width: 83vw;
+    background-color: rgba(45, 45, 45, 0.704);
+    height: 12vh;
+    margin:0 auto;
+    padding: 27px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.info .frequent .faq:hover{
+    background-color:rgb(45, 45, 45) ;
+}
+
+.info .frequent .faqs .expanded{
+    width: 83vw;
+    padding: 27px;
+    height: auto;
+    background-color: rgba(45, 45, 45, 0.704);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main .container .poster .poster-0 {
+    position: fixed;
+    top: 8vh;
+    left: 28vw;
+
+    min-width: 44vw;
+    min-height: 85vh;
+    border-radius: 8px;
+    /* background-color: rgb(22, 22, 22); */
+    border: 2px solid red;
+    z-index: 1;
+
+
+}
+
+main .container .poster .poster-0 .img {
+    position: absolute;
+    border: 2px solid pink;
+    width: 100%;
+    height: 65%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+
+}
+
+main .container .poster .poster-0 .img img {
+    width: 25%;
+    align-self: end;
+    margin: 0 6%;
+}
+
+main .container .poster .poster-0 .content {
+    background-color: rgb(22, 22, 22);
+    position: absolute;
+    left: 50;
+    top: 50;
+}
+
+main .container .poster .poster-1 .img {
+    background-image: url(assets/images/2_pushpa.webp);
+}
+
+

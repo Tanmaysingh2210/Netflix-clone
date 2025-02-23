@@ -36,7 +36,7 @@
             <p class="ready">Ready to watch? Enter your email to create or restart your membership.</p>
             <div class="join">
                 <input type="text" id="guessInput" placeholder="Email Address">
-                <div class="button">Get Started <!--<img src="assets/svgs/button.svg" alt=""> -->
+                <div class="button"><a href="#">Get Started</a> <!--<img src="assets/svgs/button.svg" alt=""> -->
                     <svg xmlns="http://www.w3.org/2000/svg" fill="white" role="img" viewBox="0 0 24 24" width="24"
                         height="24" data-icon="ChevronRightStandard" aria-hidden="true">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -55,7 +55,7 @@
         <div class="container">
             <span>Trending Now</span>
             <div class="button button-1">
-                <button><img src="assets/svgs/rightArrow.svg" alt=""></button>
+                <button id="click-2"><img src="assets/svgs/rightArrow.svg" alt=""></button>
             </div>
             <div class="cards">
                 <div class="template">
@@ -123,7 +123,7 @@
                         <span aria-hidden="true" data-content="10" class="number">10</span>
 
                         <!-- <div class="background background10"></div> -->
-                        <img src="assets/images/flower.webp" alt="">
+                        <img src="assets/images/Daaku.webp" alt="">
 
                     </div>
 
@@ -131,14 +131,15 @@
                 </div>
 
             </div>
+            <div class="button button-2">
+                <button id="click"><img src="assets/svgs/leftArrow.svg" alt=""></button>
+            </div>
         </div>
-        <div class="button button-2">
-            <button id="click"><img src="assets/svgs/leftArrow.svg" alt=""></button>
-        </div>
 
 
+        <div class="container container-1">
 
-        <!-- <span>More reasons to join</span>
+            <span>More reasons to join</span>
 
             <div class="flex-box">
                 <div class="dabba-1 dabba">
@@ -153,14 +154,14 @@
                     <div class="bag">
                         Save your favourites easily and always have something to watch.
                     </div>
-                    <div class="svg"><img src="" alt=""></div>
+                    <div class="svg"><img src="assets/svgs/download.svg" alt=""></div>
                 </div>
                 <div class="dabba-3 dabba">
                     <h3>Watch everywhere</h3>
                     <div class="bag">
                         Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.
                     </div>
-                    <div class="svg"><img src="" alt=""></div>
+                    <div class="svg"><img src="assets/svgs/popper.svg" alt=""></div>
                 </div>
                 <div class="dabba-4 dabba">
                     <h3>Create profiles for kids</h3>
@@ -168,37 +169,66 @@
                         Send kids on adventures with their favourite characters in a space made just for them — free
                         with your membership.
                     </div>
-                    <div class="svg"><img src="" alt=""></div>
+                    <div class="svg"><img src="assets/svgs/smile.svg" alt=""></div>
                 </div>
-            </div> -->
+            </div>
 
+        </div>
         </div>
     </section>
 
+    <!-- <main>
+        <div class="container">
+
+
+            <div class="poster">
+                <div class="poster-1 poster-0">
+                    <div class="img">
+                        <img src="assets/images/pushpaSymbol.webp" alt="">
+                    </div>
+                    <div class="content">
+
+                    </div>
+                </div>
+                <div class="poster-2 poster-0">
+
+                </div>
+                <div class="poster-3 poster-0"></div>
+                <div class="poster-4 poster-0"></div>
+                <div class="poster-5 poster-0"></div>
+                <div class="poster-6 poster-0"></div>
+                <div class="poster-7 poster-0"></div>
+                <div class="poster-8 poster-0"></div>
+                <div class="poster-9 poster-0"></div>
+                <div class="poster-10 poster-0"></div>
+                
+
+            </div>
+
+        </div>
+    </main> -->
+
+
+    <div class="info">
+        <div class="frequent">
+
+            <span>Frequently Asked Questions</span>
+            <div class="faqs">
+                <div class="faq faq-1">What is Netflix? <img src="assets/svgs/plus.svg" alt=""></div>
+                <div class="faq faq-2">How much does Netflix cost? <img src="assets/svgs/plus.svg" alt=""></div>
+                <div class="faq faq-3">Where can I watch? <img src="assets/svgs/plus.svg" alt=""></div>
+                <div class="faq faq-4">How do I cancel? <img src="assets/svgs/plus.svg" alt=""></div>
+                <div class="faq faq-5">What can I watch on Netflix? <img src="assets/svgs/plus.svg" alt=""></div>
+                <div class="faq faq-6">Is Netflix good for kids? <img src="assets/svgs/plus.svg" alt=""></div>
+            </div>
+
+        </div>
+    </div>
 
 
 
-    <script>
 
-
-        let btn = document.querySelector("#click");
-        console.log(btn);
-        let cards = document.querySelector(".template");
-        console.log(cards);
-        let btn1 = document.querySelector(".container").querySelector(".button-1");
-        btn1.style.disable = true;
-        btn1.style.display = "none";
-
-        btn.addEventListener("click", function () {
-            cards.style.transform = "translateX(-50%)";
-
-
-
-
-        })
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
