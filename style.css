@@ -548,13 +548,14 @@ section .container .cards .template .card:hover {
 section .container .cards .template .card .number {
     position: absolute;
     bottom: 0;
-    left: -70%;
+    left: -18%;
     font-weight: 700;
-    color: rgb(237, 214, 214);
-    -webkit-text-stroke: 0.14rem rgb(255, 255, 255);
+    color: rgb(7, 0, 0);
+    -webkit-text-stroke: 0.25rem rgb(255, 255, 255);
     text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
     font-size: 13vh;
     z-index: 3;
+    display: inline-block;
 }
 
 section .container .cards .template .card img {
@@ -716,8 +717,8 @@ section .container-1 .flex-box .dabba .bag{
 }
 .info .frequent .faq img{
     grid-area: img;
-    padding: 20px 20px;
-
+    padding: 20px 0;
+    padding-top: 25px;
 
 }
 
@@ -733,6 +734,8 @@ section .container-1 .flex-box .dabba .bag{
     grid-area: ans;
     display: none;
 }
+
+
 
 .footer{
     width: 100vw;
